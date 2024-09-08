@@ -14,8 +14,9 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
       # Install the newman command line utility and also install the html extra reporter
       - name: Install newman
         run: |
